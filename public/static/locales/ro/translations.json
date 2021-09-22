@@ -6,7 +6,7 @@
   "Forbidden": "Nu aveti dreptul sa vedeti aceasta pagina!",
   "NavBar": {
     "MyFirstMenu":"Primul meu meniu",
-    "Dashboard": "Panou central",
+    "Welcome": "Bun venit",
     "Settings": "Setari",
     "User": "Profil"
   },
@@ -19,6 +19,9 @@
     "Yes": "Da",
     "No": "Nu"
   },
+  "Welcome": {
+    "title": "Bun venit!",
+    "subtitle": "Te rog introdu email-ul personal:"},
   "DateTime": {
     "InvalidDateMessage": "Formatul datei este invalid",
     "MinDateMessage": "Data introdusa nu poate fi mai mica decat valoarea minima",

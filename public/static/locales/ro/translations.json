@@ -21,7 +21,10 @@
   },
   "Welcome": {
     "title": "Bun venit!",
-    "subtitle": "Te rog introdu email-ul personal:"},
+    "subtitle": "Te rog introdu email-ul personal:",
+    "BadEmail": "Email incorect"
+  },
+    
   "DateTime": {
     "InvalidDateMessage": "Formatul datei este invalid",
     "MinDateMessage": "Data introdusa nu poate fi mai mica decat valoarea minima",

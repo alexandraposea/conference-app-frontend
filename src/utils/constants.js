@@ -3,3 +3,4 @@ export const emptyArray = []
 export const emptyObject = {}
 export const emptyString = ''
 export const emptyFunction = () => {}
+export const validEmailRegEx = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/

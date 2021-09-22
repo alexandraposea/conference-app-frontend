@@ -19,7 +19,9 @@
   },
   "Welcome": {
     "title": "Welcome!",
-    "subtitle": "Please enter your email:"},
+    "subtitle": "Please enter your email:",
+    "BadEmail": "Incorrect email"
+  },
   "Tooltips": {
     "Logout": "Logout",
     "HidePassword": "Hide password",

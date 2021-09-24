@@ -9,12 +9,17 @@
     "Welcome": "Bun venit",
     "Settings": "Setari",
     "User": "Profil",
-    "ConferenceList": "Lista conferinte"
+    "ConferenceList": "Conferinte",
+    "MyConferences": "Conferintele mele"
   },
   "General": {
     "Buttons": {
       "ApplyFilters": "Aplica filtre",
-      "ResetFilters": "Reseteaza filtre"
+      "ResetFilters": "Reseteaza filtre",
+      "AddConference": "Adauga conferinta",
+      "Save": "Salveaza",
+      "AddSpeaker":"Adauga orator",
+      "DeleteSpeaker":"Sterge orator"
     }
   },
   "Tooltips": {
@@ -37,8 +42,37 @@
     "Withdraw": "Retrage-te",
     "StatusNotSet": "Nu participi"
   },
+  "MyConferences": {
+    "Edit": "Editeaza",
+    "Delete": "Sterge"
+  },
   "UserMenu": {
     "User" : "Utilizator"
+  },
+  "Speaker": {
+    "Name": "Name",
+    "Nationality": "Nationality",
+    "Rating": "Rating",
+    "MainSpeaker": "Main Speaker"
+  },
+  "Location": {
+    "Name": "Nume",
+    "Address": "Adresa",
+    "Country": "Tara",
+    "County": "Judet",
+    "City": "Oras",
+    "Latitude": "Latitudine",
+    "Longitude": "Longitudine"
+  },
+  "Conference": {
+    "Info": "Info conferinta",
+    "Location": "Locatie",
+    "Speakers": "Oratori",
+    "Name": "Nume conferinta",
+    "StartDate": "Data inceput",
+    "EndDate": "Data sfarsit",
+    "Type": "Tipul conferintei",
+    "Category": "Categorie"
   },
   "Welcome": {
     "title": "Bun venit!",

@@ -17,7 +17,8 @@
     "Welcome": "Welcome",
     "Settings": "Settings",
     "User": "Profil",
-    "ConferenceList": "Conference list"
+    "ConferenceList": "Conferences",
+    "MyConferences": "My conferences"
   },
   "Welcome": {
     "title": "Welcome!",
@@ -35,10 +36,18 @@
     "Withdraw": "Withdraw",
     "StatusNotSet": "Not attending"
   },
+  "MyConferences": {
+    "Edit": "Edit",
+    "Delete": "Delete"
+  },
   "General": {
     "Buttons": {
       "ApplyFilters": "Apply filters",
-      "ResetFilters": "Reset filters"
+      "ResetFilters": "Reset filters",
+      "AddConference": "Add conference",
+      "Save": "Save",
+      "AddSpeaker":"Add speaker",
+      "DeleteSpeaker":"Delete speaker"
     }
   },
   "Tooltips": {
@@ -49,6 +58,31 @@
   "Dialog": {
     "Yes": "Yes",
     "No": "No"
+  },
+  "Conference": {
+    "Info": "Conference Info",
+    "Location": "Location",
+    "Speakers": "Speakers",
+    "Name": "Conference name",
+    "StartDate": "Start date",
+    "EndDate": "End date",
+    "Type": "Conference type",
+    "Category": "Category"
+  },
+  "Location": {
+    "Name": "Name",
+    "Address": "Address",
+    "Country": "Country",
+    "County": "County",
+    "City": "City",
+    "Latitude": "Latitude",
+    "Longitude": "Longitude"
+  },
+  "Speaker": {
+    "Name": "Name",
+    "Nationality": "Nationality",
+    "Rating": "Rating",
+    "MainSpeaker": "Main Speaker"
   },
   "DateTime": {
     "InvalidDateMessage": "Invalid Date Format",

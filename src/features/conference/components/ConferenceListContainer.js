@@ -2,14 +2,12 @@ import React, { useCallback, useEffect, useState } from 'react'
 import ConferenceFilters from 'features/conference/components/ConferenceFilters'
 import ConferenceList from './ConferenceList'
 import LoadingFakeText from '@bit/totalsoft_oss.react-mui.fake-text'
-import { generateDefaultFilters } from 'utils/functions'
+import { extractPager, generateDefaultFilters } from 'utils/functions'
 import { useQueryWithErrorHandling } from 'hooks/errorHandling'
 import { CONFERENCE_LIST_QUERY } from '../gql/queries/ConferenceListQuery'
 import { useEmail } from 'hooks/useEmail'
 import { useFooter } from 'providers/AreasProvider'
 import Pagination from '@bit/totalsoft_oss.react-mui.pagination'
-
-const extractPager = ({ page, pageSize }) => ({ page, pageSize })
 
 function ConferenceListContainer() {
     const [filters, setFilters] = useState(generateDefaultFilters())

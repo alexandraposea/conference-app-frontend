@@ -54,7 +54,7 @@ const myAppLink = () => ApolloLink.from([omitTypenameLink, retryLink, authLink.c
 const cache = new InMemoryCache({
   typePolicies: {
     Page: {
-      keyFields: ['afterId', 'sortBy', 'direction', 'pageSize']
+      keyFields: ['page', 'pageSize']
     }
   }
 })

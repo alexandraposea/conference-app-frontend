@@ -1,5 +1,5 @@
 import { emptyObject } from 'utils/constants'
-import {emailKey } from './cacheKeyFunctions'
+import { emailKey } from './cacheKeyFunctions'
 
 
 // Here you define the default values for local apollo state (@client only values)
@@ -15,7 +15,7 @@ const yourEntityDefaultPager = {
 }
 const yourEntityDefaultListFilter = emptyObject
 
-const defaultEmail = {email: 'abc@gmail.com'}
+const defaultEmail = { email: 'admin@totalsoft.ro' }
 
 export const defaults = {
   [emailKey]: defaultEmail

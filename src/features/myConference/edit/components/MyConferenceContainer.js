@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useHeader } from 'providers/AreasProvider'
 import MyConferenceHeader from '../../list/components/MyConferenceHeader';
@@ -9,7 +9,7 @@ import { reducer, initialConference } from '../conferenceState'
 import { useRouteMatch } from 'react-router';
 import { useQueryWithErrorHandling } from 'hooks/errorHandling';
 import { CONFERENCE_QUERY } from 'features/myConference/gql/queries/ConferenceQuery'
-import { categories, cities, counties, countries, types } from 'utils/mocks/conferenceDictionaries';
+// import { DICTIONARY_QUERY } from 'features/myConference/gql/queries/DictionaryQuery'
 
 const MyConferenceContainer = () => {
     const { t } = useTranslation()
@@ -19,25 +19,17 @@ const MyConferenceContainer = () => {
     const conferenceId = match.params.id
     const isNew = conferenceId === 'new'
 
-    const { loading: loadingConference } = useQueryWithErrorHandling(CONFERENCE_QUERY,
+    const { data, loading: loadingConference } = useQueryWithErrorHandling(CONFERENCE_QUERY,
         {
             variables: {
                 id: conferenceId
             },
             skip: isNew,
-            onCompleted: (result) => dispatch({ type: 'resetConference', payload: result.conference })
+            onCompleted: (result) => result?.conference && dispatch({ type: 'resetConference', payload: result.conference })
         }
     )
 
-    const { loading, data } = {
-        loading: false, data: {
-            typeList: types,
-            categoryList: categories,
-            countryList: countries,
-            countyList: counties,
-            cityList: cities
-        }
-    }
+    // const { loading } = useQueryWithErrorHandling(DICTIONARY_QUERY)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => () => setHeader(null), [])
@@ -46,7 +38,7 @@ const MyConferenceContainer = () => {
         setHeader(<MyConferenceHeader title={conference.name} actions={<SaveButton title={t('General.Buttons.Save')} />} />)
     }, [conference.name, setHeader, t])
 
-    if (loading || loadingConference) {
+    if ( loadingConference) {
         return <LoadingFakeText lines={10} />
     }
 

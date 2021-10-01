@@ -3,38 +3,53 @@ import ConferenceFragments from 'features/conference/gql/queries/fragments'
 import CommonFragments from 'features/common/fragments'
 
 export const CONFERENCE_QUERY = gql`
-query conferenceById($id: ID!) {
-  conference(id: $id) {
+query conferenceData($id: ID!, $isNew: Boolean!) {
+  conference(id: $id) @skip(if: $isNew){
     ...conference
-    location {
-      ...location
-      country {
-        ...country
-      }
-      county {
-       ...county
-      }
-      city {
-       ...city
-      }
-    }
-    speakers {
-      ...speaker
-    }
     type {
       ...type
     }
     category {
       ...category
     }
+    location {
+      ...location
+      city {
+        ...city
+      }
+      county{
+        ...county
+      }
+      country{
+        ...country
+      }
+    }
+    speakers {
+      ...speaker
+    }
   }
-}
+  typeList {
+    ...type
+  }
+  categoryList {
+    ...category
+  }
+  cityList {
+    ...city
+  }
+  countyList {
+    ...county
+  }
+  countryList {
+    ...country
+  }
+},
 ${ConferenceFragments.conference}
-${ConferenceFragments.location}
 ${ConferenceFragments.speaker}
+${ConferenceFragments.location}
 ${CommonFragments.type}
 ${CommonFragments.category}
 ${CommonFragments.city}
-${CommonFragments.country}
 ${CommonFragments.county}
+${CommonFragments.country}
 `

@@ -6,6 +6,7 @@ import Autocomplete from '@bit/totalsoft_oss.react-mui.autocomplete'
 import { useTranslation } from 'react-i18next';
 import { onTextBoxChange } from 'utils/propertyChangeAdapters';
 import { emptyString } from 'utils/constants';
+import { compareOptions } from 'utils/functions';
 
 const MyConferenceLocation = (props) => {
     const { countries, counties, cities, location, dispatch } = props
@@ -35,6 +36,7 @@ const MyConferenceLocation = (props) => {
         <Grid item container lg={12} spacing={3}>
             <Grid item xs={12} sm={6} lg={3}>
                 <Autocomplete
+                    getOptionSelected={compareOptions}
                     label={t('Location.Country')}
                     createdLabel='Location.Country'
                     fullWidth
@@ -46,6 +48,7 @@ const MyConferenceLocation = (props) => {
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
                 <Autocomplete
+                    getOptionSelected={compareOptions}
                     label={t('Location.County')}
                     createdLabel='Location.County'
                     fullWidth
@@ -57,6 +60,7 @@ const MyConferenceLocation = (props) => {
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
                 <Autocomplete
+                    getOptionSelected={compareOptions}
                     label={t('Location.City')}
                     createdLabel='Location.City'
                     fullWidth

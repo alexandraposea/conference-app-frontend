@@ -5,6 +5,7 @@ import CustomTextField from '@bit/totalsoft_oss.react-mui.custom-text-field'
 import Autocomplete from '@bit/totalsoft_oss.react-mui.autocomplete'
 import { useTranslation } from 'react-i18next';
 import { onTextBoxChange } from 'utils/propertyChangeAdapters';
+import { emptyString } from 'utils/constants';
 
 const MyConferenceLocation = (props) => {
     const { countries, counties, cities, location, dispatch } = props
@@ -18,7 +19,7 @@ const MyConferenceLocation = (props) => {
                 <CustomTextField
                     label={t('Location.Name')}
                     fullWidth
-                    value={name}
+                    value={name ?? emptyString}
                     onChange={onTextBoxChange(handleDispatch('locationName'))}
                 />
             </Grid>
@@ -26,7 +27,7 @@ const MyConferenceLocation = (props) => {
                 <CustomTextField
                     label={t('Location.Address')}
                     fullWidth
-                    value={address}
+                    value={address ?? emptyString}
                     onChange={onTextBoxChange(handleDispatch('address'))}
                 />
             </Grid>
@@ -39,7 +40,7 @@ const MyConferenceLocation = (props) => {
                     fullWidth
                     isClearable
                     options={countries}
-                    value={country}
+                    value={country ?? emptyString}
                     onChange={handleDispatch('country')}
                 />
             </Grid>
@@ -50,7 +51,7 @@ const MyConferenceLocation = (props) => {
                     fullWidth
                     isClearable
                     options={counties}
-                    value={county}
+                    value={county ?? emptyString}
                     onChange={handleDispatch('county')}
                 />
             </Grid>
@@ -60,10 +61,9 @@ const MyConferenceLocation = (props) => {
                     createdLabel='Location.City'
                     fullWidth
                     isClearable
-                    isSearchable
                     creatable
                     options={cities}
-                    value={city}
+                    value={city ?? emptyString}
                     onChange={handleDispatch('city')}
                 />
             </Grid>
@@ -73,16 +73,16 @@ const MyConferenceLocation = (props) => {
                 <CustomTextField
                     label={t('Location.Latitude')}
                     fullWidth
-                    value={latitude}
-                    onChange= {onTextBoxChange(handleDispatch('latitude'))}
+                    value={latitude ?? emptyString}
+                    onChange={onTextBoxChange(handleDispatch('latitude'))}
                 />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
                 <CustomTextField
                     label={t('Location.Longitude')}
                     fullWidth
-                    value={longitude}
-                    onChange= {onTextBoxChange(handleDispatch('longitude'))}
+                    value={longitude ?? emptyString}
+                    onChange={onTextBoxChange(handleDispatch('longitude'))}
                 />
             </Grid>
         </Grid>

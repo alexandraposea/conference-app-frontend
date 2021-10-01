@@ -22,9 +22,10 @@ const MyConferenceContainer = () => {
     const { data, loading: loadingConference } = useQueryWithErrorHandling(CONFERENCE_QUERY,
         {
             variables: {
-                id: conferenceId
+                id: conferenceId,
+                isNew
             },
-            skip: isNew,
+
             onCompleted: (result) => result?.conference && dispatch({ type: 'resetConference', payload: result.conference })
         }
     )
@@ -38,7 +39,7 @@ const MyConferenceContainer = () => {
         setHeader(<MyConferenceHeader title={conference.name} actions={<SaveButton title={t('General.Buttons.Save')} />} />)
     }, [conference.name, setHeader, t])
 
-    if ( loadingConference) {
+    if (loadingConference) {
         return <LoadingFakeText lines={10} />
     }
 

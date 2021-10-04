@@ -5,7 +5,7 @@
   "MyProfile": "Profilul meu",
   "Forbidden": "Nu aveti dreptul sa vedeti aceasta pagina!",
   "NavBar": {
-    "MyFirstMenu":"Primul meu meniu",
+    "MyFirstMenu": "Primul meu meniu",
     "Welcome": "Bun venit",
     "Settings": "Setari",
     "User": "Profil",
@@ -18,9 +18,10 @@
       "ResetFilters": "Reseteaza filtre",
       "AddConference": "Adauga conferinta",
       "Save": "Salveaza",
-      "AddSpeaker":"Adauga orator",
-      "DeleteSpeaker":"Sterge orator"
-    }
+      "AddSpeaker": "Adauga orator",
+      "DeleteSpeaker": "Sterge orator"
+    },
+    "Congratulations": "Felicitari!"
   },
   "Tooltips": {
     "Logout": "Iesire",
@@ -32,22 +33,24 @@
     "No": "Nu"
   },
   "Conferences": {
-    "Filters" : {
+    "Filters": {
       "StartDate": "Data inceput",
       "EndDate": "Data sfarsit"
     },
-    "Speaker" : "Orator: ",
+    "Speaker": "Orator: ",
     "Attend": "Participa",
     "Join": "Inscrie-te",
     "Withdraw": "Retrage-te",
-    "StatusNotSet": "Nu participi"
+    "StatusNotSet": "Nu participi",
+    "SuccessfullyAttended": "Felicitari! Te-ai inscris cu succes la conferinta! Vei fi notificat cu 5 minute inainte sa inceapa.",
+    "QRCodeMessage": "Te-ai inscris cu succes la conferinta! Vei fi notificat cu 5 minute inainte sa inceapa. Foloseste urmatorul cod pentru a accesa conferinta: {{code}}"
   },
   "MyConferences": {
     "Edit": "Editeaza",
     "Delete": "Sterge"
   },
   "UserMenu": {
-    "User" : "Utilizator"
+    "User": "Utilizator"
   },
   "Speaker": {
     "Name": "Name",
@@ -79,7 +82,7 @@
     "subtitle": "Te rog introdu email-ul personal:",
     "BadEmail": "Acesta nu este un email valid"
   },
-    
+
   "DateTime": {
     "InvalidDateMessage": "Formatul datei este invalid",
     "MinDateMessage": "Data introdusa nu poate fi mai mica decat valoarea minima",

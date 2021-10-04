@@ -13,7 +13,7 @@
   "MyProfile": "My Profile",
   "Forbidden": "Not allowed to see this page!",
   "NavBar": {
-    "MyFirstMenu":"My first menu",
+    "MyFirstMenu": "My first menu",
     "Welcome": "Welcome",
     "Settings": "Settings",
     "User": "Profil",
@@ -26,15 +26,17 @@
     "BadEmail": "This is not a valid email"
   },
   "Conferences": {
-    "Filters" : {
+    "Filters": {
       "StartDate": "Start date",
       "EndDate": "End date"
     },
-    "Speaker" : "Speaker: ",
+    "Speaker": "Speaker: ",
     "Attend": "Attend",
     "Join": "Join",
     "Withdraw": "Withdraw",
-    "StatusNotSet": "Not attending"
+    "StatusNotSet": "Not attending",
+    "SuccessfullyAttended": "Congratulations! You successfully attended to the conference! You will be notified to join 5 minutes before it starts.",
+    "QRCodeMessage": "You successfully attended to the conference! You will be notified to join 5 minutes before it starts. Use the following code to access the conference: {{code}}"
   },
   "MyConferences": {
     "Edit": "Edit",
@@ -46,9 +48,10 @@
       "ResetFilters": "Reset filters",
       "AddConference": "Add conference",
       "Save": "Save",
-      "AddSpeaker":"Add speaker",
-      "DeleteSpeaker":"Delete speaker"
-    }
+      "AddSpeaker": "Add speaker",
+      "DeleteSpeaker": "Delete speaker"
+    },
+    "Congratulations": "Congratulations!"
   },
   "Tooltips": {
     "Logout": "Logout",
@@ -90,7 +93,7 @@
     "MaxDateMessage": "Date should not be after maximal date"
   },
   "UserMenu": {
-    "User" : "User"
+    "User": "User"
   },
   "Validations": {
     "Cnp": "The value is not a valid identifier number",

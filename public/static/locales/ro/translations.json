@@ -43,6 +43,7 @@
     "Join": "Inscrie-te",
     "Withdraw": "Retrage-te",
     "StatusNotSet": "Nu participi",
+    "SavingSucceeded": "Conferinta a fost salvata cu succes",
     "SuccessfullyAttended": "Felicitari! Te-ai inscris cu succes la conferinta! Vei fi notificat cu 5 minute inainte sa inceapa.",
     "QRCodeMessage": "Te-ai inscris cu succes la conferinta! Vei fi notificat cu 5 minute inainte sa inceapa. Foloseste urmatorul cod pentru a accesa conferinta: {{code}}",
     "SuccessfullyWithdrawn": "Retras cu succes"

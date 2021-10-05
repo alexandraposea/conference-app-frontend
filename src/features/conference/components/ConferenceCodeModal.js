@@ -12,7 +12,7 @@ const ConferenceCodeModal = ({ code, suggestedConferences, onAttend }) => {
     const { t } = useTranslation()
     return (
         <>
-            <Grid container justifyContent='center'>
+            <Grid container justifyContent='center' direction='column' alignItems="center">
                 <Grid item lg={12}>
                     <img alt='QR' src={qrCode} style={{ maxHeight: '100px' }} />
                 </Grid>
@@ -25,7 +25,7 @@ const ConferenceCodeModal = ({ code, suggestedConferences, onAttend }) => {
                     <Grid item lg={12}>
                         <Typography>{t('General.SuggestedConferences')}</Typography>
                     </Grid>
-                    {suggestedConferences.map(conference => 
+                    {suggestedConferences.map(conference =>
                         <Grid item key={conference?.id}>
                             <ConferenceItem conference={conference} onAttend={onAttend} />
                         </Grid>

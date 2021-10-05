@@ -64,6 +64,7 @@ function ConferenceListContainer() {
                 setSuggestedConferences(result?.attend?.suggestedConferences)
                 setOpen(true)
                 addToast(t('Conferences.SuccessfullyAttended'), 'success')
+                refetch()
             }
         }
     })

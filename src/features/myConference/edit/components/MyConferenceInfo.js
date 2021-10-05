@@ -26,11 +26,13 @@ const MyConferenceInfo = (props) => {
             <Grid item lg={3} sm={6} xs={12}>
                 <DateTime label={t('Conference.StartDate')} showTime={true}
                     value={startDate}
+                    views={['date','hours','minutes']}
                     onChange={handleChange('startDate')} />
             </Grid>
             <Grid item lg={3} sm={6} xs={12}>
                 <DateTime label={t('Conference.EndDate')} showTime={true}
                     value={endDate}
+                    views={['date','hours','minutes']}
                     onChange={handleChange('endDate')} />
             </Grid>
             <Grid item lg={3} sm={6} xs={12}>

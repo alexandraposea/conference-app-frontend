@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import attendeeStatus from 'constants/attendeeStatus'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
@@ -6,7 +6,7 @@ import { Grid, Typography } from '@material-ui/core'
 import Button from '@bit/totalsoft_oss.react-mui.button'
 
 const ConferenceContent = (props) => {
-    const { conference, onAttend, onWithdraw } = props
+    const { conference, onAttend, onWithdraw, onJoin } = props
     const { status, startDate, endDate, type, category } = conference
     const { t } = useTranslation()
     const noStatusSet = t('Conferences.StatusNotSet')
@@ -33,7 +33,7 @@ const ConferenceContent = (props) => {
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         {showJoin && (
-                            <Button right color="success" size="sm">{t('Conferences.Join')}</Button>
+                            <Button onClick={onJoin(conference?.id)} right color="success" size="sm">{t('Conferences.Join')}</Button>
                         )}
 
                         {showWithdraw && (
@@ -53,8 +53,8 @@ const ConferenceContent = (props) => {
 ConferenceContent.propTypes = {
     conference: PropTypes.object.isRequired,
     onAttend: PropTypes.func.isRequired,
-    onWithdraw: PropTypes.func.isRequired
-    // shape({a: PropTypes.func, t: PropTypes.string, s:PropTypes.object}) varianta pentru forma obiectului
+    onWithdraw: PropTypes.func.isRequired,
+    onJoin: PropTypes.func.isRequired
 }
 
 export default ConferenceContent;

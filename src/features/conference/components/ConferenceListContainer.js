@@ -11,11 +11,13 @@ import Pagination from '@bit/totalsoft_oss.react-mui.pagination'
 import { useMutation } from '@apollo/client'
 import ATTEND_CONFERENCE from '../gql/mutations/AttendConference'
 import WITHDRAW_CONFERENCE from '../gql/mutations/WithdrawConference'
+import JOIN_CONFERENCE from '../gql/mutations/JoinConference'
 import DialogDisplay from '@bit/totalsoft_oss.react-mui.dialog-display'
 import ConferenceCodeModal from './ConferenceCodeModal'
 import { useToast } from '@bit/totalsoft_oss.react-mui.kit.core'
 import { useTranslation } from 'react-i18next'
 import { emptyArray, emptyString } from 'utils/constants'
+import { useHistory } from 'react-router'
 
 
 function ConferenceListContainer() {
@@ -25,6 +27,8 @@ function ConferenceListContainer() {
     const showError = useError()
     const [code, setCode] = useState()
     const [open, setOpen] = useState(false)
+    const history = useHistory()
+
 
     const { t } = useTranslation()
 
@@ -96,10 +100,31 @@ function ConferenceListContainer() {
                     conferenceId,
                     attendeeEmail: email
                 }
-
             }
         })
     }, [withdraw, email]);
+
+    const [join] = useMutation(JOIN_CONFERENCE, {
+        onCompleted: () => {
+            addToast(t("Conferences.SuccessfullyJoined"), 'success')
+            refetch()
+        },
+        onError: showError
+    })
+
+    const handleJoin = useCallback(conferenceId => () => {
+        join({
+            variables: {
+                input: {
+                    conferenceId,
+                    attendeeEmail: email
+                }
+            }
+        })
+        refetch()
+        
+        history.push(`/joinedConference/${conferenceId}`)
+    }, [join, email, refetch, history]);
 
     useEffect(() => {
         setFooter(<Pagination
@@ -130,7 +155,8 @@ function ConferenceListContainer() {
             <ConferenceFilters filters={filters} onApplyFilters={handleApplyFilters} />
             <ConferenceList conferences={data?.conferenceList?.values}
                 onAttend={handleAttend}
-                onWithdraw={handleWithdraw} />
+                onWithdraw={handleWithdraw}
+                onJoin={handleJoin} />
             <DialogDisplay id='showQRCode'
                 open={open}
                 onClose={handleClose}

@@ -6,7 +6,7 @@ import { emailKey } from './cacheKeyFunctions'
 
 
 
-const defaultEmail = { email: 'admin@totalsoft.ro' }
+const defaultEmail = { email: 'ap@totalsoft.ro' }
 
 export const defaults = {
   [emailKey]: defaultEmail

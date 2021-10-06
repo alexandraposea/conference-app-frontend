@@ -1,15 +1,16 @@
 import { gql } from '@apollo/client'
 
 const Fragments = {
-    conference: gql`
+  conference: gql`
     fragment conference on Conference {
        id
        name
        startDate
        endDate 
+       organizerEmail
     }
     `,
-    location: gql`
+  location: gql`
     fragment location on Location {
         id
         name
@@ -18,7 +19,7 @@ const Fragments = {
         longitude
     }
     `,
-    speaker: gql`
+  speaker: gql`
     fragment speaker on Speaker {
       id
       name
@@ -27,7 +28,7 @@ const Fragments = {
       isMainSpeaker
     }
     `,
-    
+
 }
 
 
